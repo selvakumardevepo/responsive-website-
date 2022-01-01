@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  	<!--external css style sheet-->
+  	 <link rel="stylesheet" href="style.css">
+
+  <style type="text/css">
+  	.background-login{
+
+       background: linear-gradient(to bottom right,white 0%,white,#006699 80%, #006699 100%);          
+       height: 100vh;
+
+  	}
+
+    .panel{
+      margin-top: -55px;
+      background-color:#0606065e;
+    }
+
+    .panel-body{
+    	background-color:#7CB0CA;
+    }
+    .panel-heading{
+      font-family: UniSans;
+      color: #EE5253;
+      background-color: #00B2DF;
+    }
+    .btn{
+     font-family: 'PT Sans',sans-serif;
+      width: 100px;
+      background-color: #F26552;
+    }
+
+    .panel-footer{
+    	background-color:#00B2DF;
+    }
+
+    .poptin-bird-flying{
+      position: relative;
+      animation-name: mymove;
+      animation-duration: 3s;
+      overflow: hidden;
+    }
+
+    @keyframes mymove {
+      from {right:500px;}
+      to {right: 0px;}
+          }
+
+    @media only screen and (max-width: 899px) {
+      .poptin-bird-flying{
+         width: 170px;
+          }
+
+      }
+
+      .background{
+      		 position: relative;
+      animation-name: mymove-one;
+      animation-duration: 2s;
+      overflow: hidden;	
+      }
+
+      @keyframes mymove-one{
+      from {bottom:200px;}
+      to {bottom: 0px;}
+          }
+
+</style> 
+</head>
+<body class="background-login">
+	  <!-- Modal-->
+
+  <div class="background" id="goup">
+  	<img src="poptin-bird-flying.gif" class="poptin-bird-flying" style="margin-left: 14%;">
+
+    <div class="col-lg-4 col-lg-offset-4 col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+    <div class="panel" class="box">
+
+      <div class="panel-heading">
+        <h1>Let's discuss your project</h1>
+      </div>
+     
+      <div class="panel-body">    
+              <form action="loginsql.php" method="post">            
+                  <div class="form-group">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-user"> </i></span>
+                      <input type="text" class="form-control" placeholder="Enter Name" name="email" required="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-phone"> </i></span>
+                      <input type="text" class="form-control" placeholder="Enter Contact number" name="password"  required="">
+                    </div>
+                  </div>                 
+                  <button type="submit" class="btn" style="margin-right: 40px;color: white;"><b>SEND</b></button>
+            
+                    <button type="reset" class="btn" style="margin-left: 40px;color: white;"><b>IGNORE</b></button>
+              </form>
+           </div>       
+           <div class="panel-footer text-right">
+            
+              <b style="color: white;">&nbsp;&copy;HOVERSOLUTIONS</b>
+           </div>   
+
+
+		</div>
+		</div>
+		 </div>
+
+	    <script type="text/javascript">
+    window.addEventListener('scroll', reveal);
+
+    function reveal(){
+      var reveals = document.querySelectorAll('.reveal');
+
+      for(var i = 0; i < reveals.length; i++){
+
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if(revealtop < windowheight - revealpoint){
+          reveals[i].classList.add('active');
+        }
+        else{
+          reveals[i].classList.remove('active');
+        }
+      }
+    }
+    </script>
+
+</body>
+</html>

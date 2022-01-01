@@ -1,0 +1,21 @@
+<html>
+<head>
+<!--script file links-->
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script type="text/javascript">
+$("#qty1,#amt1").keyup(function () { $('#tt1').val($('#amt1').val() * $('#qty1').val()); });
+</script>
+</head>
+<body>
+<table>
+<tr><td>amount 1:<input type="text" id="amt1" value="15" readonly=""></td><td>qunatity 1:<input type="text" id="qty1"></td><td> total 1:<input type="text" name"amt" id="ttl" readonly=""></td></tr>
+<tr><td>amount 2:<input type="text" id="amt2" value="14" readonly=""></td><td>qunatity 2:<input type="text" id="qty2"></td><td> total 2:<input type="text" name"amt" id="tt2" readonly=""></td></tr>
+<tr><td>amount 3:<input type="text" id="amt3" value="13" readonly=""></td><td>qunatity 3:<input type="text" id="qty3"></td><td> total 3:<input type="text" name"amt" id="tt3" readonly=""></td></tr>
+<tr><td>amount 4:<input type="text" id="amt4" value="12" readonly=""></td><td>qunatity 4:<input type="text" id="qty4"></td><td> total 4:<input type="text" name"amt" id="tt4" readonly=""></td></tr>
+<tr><td></td>                                               <td></td>  				  <td>All total:<input type="text" name"amt" id="totalamount"></td></tr>
+</table>
+</body>
+</html
+
+
